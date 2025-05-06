@@ -12,6 +12,10 @@ Installation
 ---
 Create new database as "todo_tasks_db".
 
-Import using `todo_tasks_db.sql` file.
+Import "tasks" table using `task.sql` file.
 
 Run the app as usual
+
+<br/>
+
+`Make sure the directory name is "task/"`
