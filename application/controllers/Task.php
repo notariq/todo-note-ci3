@@ -48,6 +48,11 @@ class Task extends CI_Controller {
     }
 
     public function delete($id) {
+        $task = $this->task->get($id);
+        if ($task['image_path'] && file_exists($task['image_path'])) {
+            unlink($task['image_path']);
+        }
+
         $this->task->delete($id);
         redirect('');
     }
@@ -103,7 +108,7 @@ class Task extends CI_Controller {
             $upload_data = $this->upload->data();
             $image_path = 'uploads/' . $upload_data['file_name'];
 
-            $this->task->update($task_id, ['image_path' => $image_path]);
+            $this->task->update($id, ['image_path' => $image_path]);
 
             if ($old_image && file_exists('./' . $old_image)) {
                 unlink('./' . $old_image);

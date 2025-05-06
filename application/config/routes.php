@@ -53,16 +53,16 @@ $route['default_controller'] = 'task';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+// View Routes
 $route['create'] = 'task/create';
-$route['store'] = 'task/store';
-$route['edit/(:any)'] = 'task/edit/$1';
-
-$route['update_description/(:any)'] = 'task/update_description/$1';
-
 $route['detail/(:any)'] = 'task/detail/$1';
-$route['update/(:any)'] = 'task/update/$1';
-$route['delete/(:any)'] = 'task/delete/$1';
 
-// Images
-$route['upload_image/(:any)'] = 'task/upload_image/$1';
-$route['delete_image/(:any)'] = 'task/delete_image/$1';
+// Controller Routes
+$route['store'] = 'task/store'; // Task Form Page
+$route['update/(:any)'] = 'task/update/$1'; // Task List Page
+$route['delete/(:any)'] = 'task/delete/$1'; // Task List Page
+
+$route['update_description/(:any)'] = 'task/update_description/$1'; // Detail Page
+$route['update_info/(:any)'] = 'task/update_info/$1'; // Detail Page
+$route['upload_image/(:any)'] = 'task/upload_image/$1'; // Detail Page
+$route['delete_image/(:any)'] = 'task/delete_image/$1'; // Detail Page

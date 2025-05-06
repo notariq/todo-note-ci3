@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 04, 2025 at 12:06 PM
+-- Generation Time: May 06, 2025 at 06:45 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -38,14 +38,6 @@ CREATE TABLE `tasks` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `tasks`
---
-
-INSERT INTO `tasks` (`id`, `title`, `description`, `created_at`, `deadline`, `status`, `image_path`) VALUES
-(12, 'beli nasi goreng lah', '\r\n                <p>di samping kuburan deket lapangan</p>\r\n            ', '2025-05-04', '2025-05-06', 'Pending', 'uploads/3abd48c5abb621202a4f55adff766ae1.jpg'),
-(13, 'laporan praktikum sismul', NULL, '2025-05-04', '2025-05-09', 'Ongoing', NULL);
-
---
 -- Indexes for dumped tables
 --
 
@@ -63,7 +55,7 @@ ALTER TABLE `tasks`
 -- AUTO_INCREMENT for table `tasks`
 --
 ALTER TABLE `tasks`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
